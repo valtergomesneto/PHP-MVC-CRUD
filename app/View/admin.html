@@ -1,0 +1,22 @@
+<h1>Gerenciador de Conteúdo</h1>
+
+<a href="http://192.168.100.138/projeto_php/?pagina=admin&metodo=create">Criar Publicação</a><br>
+<br>
+<hr>
+<br>
+<table border="2">
+	<tr>
+		<th>ID</th>
+		<th>Titulo</th>
+		<th>Alterar</th>
+		<th>Deletar</th>
+	</tr>
+	{% for result in postagens %}
+	<tr>
+		<th>{{result.id}}</th>
+		<th>{{result.titulo}}</th>
+		<th><a href="http://192.168.100.138/projeto_php/?pagina=admin&metodo=change&id={{result.id}}">Alterar</th>
+		<th><a href="http://192.168.100.138/projeto_php/?pagina=admin&metodo=delete&id={{result.id}}">Deletar</th>
+	</tr>
+	{% endfor %}
+</table>
