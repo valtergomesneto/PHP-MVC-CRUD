@@ -8,6 +8,20 @@
 
 					<br>
 					<hr>
+					<br>
+
+					<form method="post" action="http://192.168.100.138/projeto_php/?pagina=post&metodo=addComent">
+						<span>Nome:</span><br>
+						<input type="text" name="nome"><br><br>
+						<span>Mensagem:</span><br>
+						<textarea name="msg" cols="25" rows="5"></textarea><br><br>
+
+						<input type="hidden" name="id" value="{{id}}">
+
+						<input type="submit" value="Enviar">
+					</form>
+					<br><br>
+
 					<h1>Comentarios:</h1>
 					
 					{% if comentarios == false %}
